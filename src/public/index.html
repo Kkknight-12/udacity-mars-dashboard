@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>MARS Rover</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
         integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
@@ -15,14 +15,26 @@
     <script type="text/javascript"  src="/client.js" defer ></script>
 
     <style>
+
+        /* a:link{ */
+            /* background-color: hsl(0, 0%, 15%); */
+           /* color:hsl(0, 0%, 15%) */
+        /* } */
+        
+        a:visited{
+            color:hsl(0, 0%, 15%)
+        /* background-color: hsl(0, 0%, 15%);
+          color: white; */
+        }
+
         a:hover {
-            background-color: slategrey;
-            color: tomato;
+            background-color: hsl(0, 0%, 15%);
+            color: white;
         }
 
         a:active {
-            background-color: royalblue;
-            color: peru;
+            background-color: hsl(0, 0%, 15%);
+            color: white;
         }
 
         .nav-tabs .nav-link {
@@ -30,17 +42,27 @@
         }
 
         .jumbotron {
-            background: black;
+            background: hsl(0, 0%, 15%);
             color: white;
             max-height: 27vh;
+        }
+
+        .roverData{
+            color: hsl(0, 0%, 15%);
+        }
+
+        .RoverName{
+            color: hsl(0, 0%, 15%);
         }
     </style>
 
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1>NASA - MARS Rover</h1>
+    <div class="jumbotron text-center">
+        <div class="text-center">
+            <h1>NASA - MARS Rover</h1>
+        </div>
         <hr>
         <p>Please select <b> Rover Name </b> to get the latest photos and information.</p>
     </div>
@@ -50,11 +72,11 @@
             <div class="col-md-12 ">
                 <nav class="font-weight-bold">
                     <div class="nav nav-tabs nav-fill" role="tablist">
-                        <a class="nav-item nav-link " data-toggle="tab" href="#" role="tab" aria-controls="nav-home"
+                        <a class="RoverName nav-item nav-link " data-toggle="tab" href="#" role="tab" aria-controls="nav-home"
                             aria-selected="true" onclick="processUI('curiosity',createDynamicUI)">Curiosity</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#" role="tab" aria-controls="nav-profile"
+                        <a class="RoverName nav-item nav-link" data-toggle="tab" href="#" role="tab" aria-controls="nav-profile"
                             aria-selected="false" onclick="processUI('opportunity',createDynamicUI)">Opportunity</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#" role="tab" aria-controls="nav-contact"
+                        <a class="RoverName nav-item nav-link" data-toggle="tab" href="#" role="tab" aria-controls="nav-contact"
                             aria-selected="false" onclick="processUI('spirit',createDynamicUI)">Spirit </a>
                     </div>
                 </nav>
@@ -65,27 +87,29 @@
             <div class="card card-body text-success">
                 <div id="errorBox">
                 </div>
-                <div id="roverMetaInfo" class="row">
-                    <div class="col-md-4">
-                        <b>Rover Name: </b><label id="roverName"></label>
-                    </div>
-                    <br>
-                    <div class="col-md-4">
-                        <b>Launch Date: </b> <label id="launchDate"></label>
-                    </div>
-                    <br>
-                    <div class="col-md-4">
-                        <b>Landing Date: </b> <label id="landingDate"></label> <br>
-                    </div>
-                    <div class="col-md-4">
-                        <b>Status of the rover:</b> <label id="status"></label> <br>
-                    </div>
-                    <div class="col-md-4">
-                        <b>Recent date of photos: </b> <label id="recentDate"></label> <br>
+                <div class="container">
+                    <div id="roverMetaInfo" class="row">
+                        <div class="col-md-4 roverData">
+                            <b>Rover Name: </b><label id="roverName"></label>
+                        </div>
+                        <br>
+                        <div class="col-md-4 roverData">
+                            <b>Launch Date: </b> <label id="launchDate"></label>
+                        </div>
+                        <br>
+                        <div class="col-md-4 roverData">
+                            <b>Landing Date: </b> <label id="landingDate"></label> <br>
+                        </div>
+                        <div class="col-md-4 roverData">
+                            <b>Status of the rover:</b> <label id="status"></label> <br>
+                        </div>
+                        <!-- <div class="col-md-4 roverData">
+                            <b>Recent date of photos: </b> <label id="recentDate"></label> <br>
+                        </div> -->
                     </div>
                 </div>
             </div>
-            <div id="roverImages" class="row">
+            <div id="roverImages" class="row justify-content-center">
             </div>
             <div id= "pages">
                 
