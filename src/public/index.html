@@ -73,11 +73,11 @@
                 <nav class="font-weight-bold">
                     <div class="nav nav-tabs nav-fill" role="tablist">
                         <a class="RoverName nav-item nav-link " data-toggle="tab" href="#" role="tab" aria-controls="nav-home"
-                            aria-selected="true" onclick="processUI('curiosity',createDynamicUI)">Curiosity</a>
+                            aria-selected="true" onclick="processUIData('curiosity', DynamicUI)">Curiosity</a>
                         <a class="RoverName nav-item nav-link" data-toggle="tab" href="#" role="tab" aria-controls="nav-profile"
-                            aria-selected="false" onclick="processUI('opportunity',createDynamicUI)">Opportunity</a>
+                            aria-selected="false" onclick="processUIData('opportunity', DynamicUI)">Opportunity</a>
                         <a class="RoverName nav-item nav-link" data-toggle="tab" href="#" role="tab" aria-controls="nav-contact"
-                            aria-selected="false" onclick="processUI('spirit',createDynamicUI)">Spirit </a>
+                            aria-selected="false" onclick="processUIData('spirit', DynamicUI)">Spirit </a>
                     </div>
                 </nav>
             </div>
@@ -85,10 +85,10 @@
         <hr>
         <div id="content">
             <div class="card card-body text-success">
-                <div id="errorBox">
+                <div id="errorCard">
                 </div>
                 <div class="container">
-                    <div id="roverMetaInfo" class="row">
+                    <div id="roverMetaData" class="row">
                         <div class="col-md-4 roverData">
                             <b>Rover Name: </b><label id="roverName"></label>
                         </div>
